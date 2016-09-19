@@ -29,7 +29,7 @@ module.exports = {
             loader: 'style-loader!css-loader'
         }, {
             test: /\.(png|jpg|gif|jpeg)$/,
-            loader: 'url-loader?limit=8192&name=./image/[hash].[ext]'
+            loader: 'url-loader?limit=8192&name=../image/[hash].[ext]'
         }]
     },
     plugins: [

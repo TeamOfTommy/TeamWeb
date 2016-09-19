@@ -1,0 +1,290 @@
+@import "functions.scss";
+@import "animate.scss";
+
+.first-block {
+    background: transparent url('../../image/home_back_1.jpeg') left top no-repeat;
+
+    .name {
+        position: absolute;
+        top: 30%;
+        margin: 0 auto;
+        color: #e2dfdf;
+        @include border-radius(50%);
+        border: 5px rgba(226, 222, 222,0.6) solid;
+        text-align: center;
+        animation: nameDown 1.2s;
+        -moz-animation: nameDown 1.2s;
+        -webkit-animation: nameDown 1.2s;
+        -o-animation: nameDown 1.2s;
+
+        p {
+            font-size: 25px;
+            height: 15%;
+            line-height: 125%;
+            font-weight: 700;
+
+            &:first-child {
+                margin-top: 25%;
+            }
+        }
+    }
+
+    .name-circle {
+        position: absolute;
+        @include border-radius(50%);
+        border: 1px rgba(228, 224, 224,0.4) solid;
+        -moz-animation: nameCircle 1.3s;
+        -webkit-animation: nameCircle 1.3s;
+        -o-animation: nameCircle 1.3s;
+    }
+
+    .next-block {
+        position: absolute;
+        bottom: 50px;
+        left: 8%;
+        font-size: 33px;
+        font-style: italic;
+        color: #e6e6e6;
+        opacity: 0.8;
+        -moz-animation: nextBlock 1.5s ease-out;
+        -webkit-animation: nextBlock 1.5s ease-out;
+        -o-animation: nextBlock 1.5s ease-out;
+
+        img {
+            height: 33px;
+            margin-left: 10px;
+            margin-top: -5px;
+            -moz-animation: nextJump 2s infinite;
+            -webkit-animation: nextJump 2s infinite;
+            -o-animation: nextJump 2s infinite;
+        }
+    }
+}
+@keyframes nameDown {
+    from {
+        opacity: 0;
+        top: 0;
+    }
+
+    to {
+        opacity: 1;
+        top: 30%;
+    }
+}
+@-moz-keyframes nameDown {
+    from {
+        opacity: 0;
+        top: 0;
+    }
+
+    to {
+        opacity: 1;
+        top: 30%;
+    }
+}
+@-webkit-keyframes nameDown {
+    from {
+        opacity: 0;
+        top: 0;
+    }
+
+    to {
+        opacity: 1;
+        top: 30%;
+    }
+}
+@-o-keyframes nameDown {
+    from {
+        opacity: 0;
+        top: 0;
+    }
+
+    to {
+        opacity: 1;
+        top: 30%;
+    }
+}
+@keyframes nameCircle {
+    0% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes nameCircle {
+    0% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes nameCircle {
+    0% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@-o-keyframes nameCircle {
+    0% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes nextBlock {
+    0% {
+        left: -20%;
+        opacity: 0;
+    }
+
+    80% {
+        left: -20%;
+        opacity: 0;
+    }
+
+    100% {
+        left: 8%;
+        opacity: 0.8;
+    }
+}
+@-moz-keyframes nextBlock {
+    0% {
+        left: -20%;
+        opacity: 0;
+    }
+
+    80% {
+        left: -20%;
+        opacity: 0;
+    }
+
+    100% {
+        left: 8%;
+        opacity: 0.8;
+    }
+}
+@-webkit-keyframes nextBlock {
+    0% {
+        left: -20%;
+        opacity: 0;
+    }
+
+    80% {
+        left: -20%;
+        opacity: 0;
+    }
+
+    100% {
+        left: 8%;
+        opacity: 0.8;
+    }
+}
+@-o-keyframes nextBlock {
+    0% {
+        left: -20%;
+        opacity: 0;
+    }
+
+    80% {
+        left: -20%;
+        opacity: 0;
+    }
+
+    100% {
+        left: 8%;
+        opacity: 0.8;
+    }
+}
+@keyframes nextJump {
+    0% {
+        @include scale(1);
+    }
+
+    80% {
+        @include scale(1.2);
+    }
+
+    90% {
+        @include scale(0.9);
+    }
+
+    100% {
+        @include scale(1);
+    }
+}
+@-moz-keyframes nextJump {
+    0% {
+        @include scale(1);
+    }
+
+    80% {
+        @include scale(1.2);
+    }
+
+    90% {
+        @include scale(0.9);
+    }
+
+    100% {
+        @include scale(1);
+    }
+}
+@-webkit-keyframes nextJump {
+    0% {
+        @include scale(1);
+    }
+
+    80% {
+        @include scale(1.2);
+    }
+
+    90% {
+        @include scale(0.9);
+    }
+
+    100% {
+        @include scale(1);
+    }
+}
+@-o-keyframes nextJump {
+    0% {
+        @include scale(1);
+    }
+
+    80% {
+        @include scale(1.2);
+    }
+
+    90% {
+        @include scale(0.9);
+    }
+
+    100% {
+        @include scale(1);
+    }
+}
