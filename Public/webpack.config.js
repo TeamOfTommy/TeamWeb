@@ -2,10 +2,12 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: {
+        'home/index': './assest/js/home/index.js'
     },
     output: {
         path: __dirname + '/js/',
-        filename: '[name].bundle.js'
+        filename: '[name].bundle.js',
+        publicPath: '/Public/image/'
     },
     module: {
         loaders: [{
@@ -25,6 +27,9 @@ module.exports = {
         }, {
             test: /\.css$/,
             loader: 'style-loader!css-loader'
+        }, {
+            test: /\.(png|jpg|gif|jpeg)$/,
+            loader: 'url-loader?limit=8192&name=./image/[hash].[ext]'
         }]
     },
     plugins: [
