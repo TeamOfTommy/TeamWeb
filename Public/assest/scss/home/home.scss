@@ -1,5 +1,10 @@
-.show-block {
-    position: relative;
+.home-layout {
     width: 100%;
-    font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+    height: 100%;
+
+    .show-block {
+        position: relative;
+        width: 100%;
+        font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+    }
 }
