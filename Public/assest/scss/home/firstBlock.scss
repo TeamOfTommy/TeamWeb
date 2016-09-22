@@ -59,6 +59,23 @@
             -o-animation: nextJump 2s infinite;
         }
     }
+
+    &.hide-back {
+        .name,
+        .name-circle {
+            animation: nameUp 1.2s;
+            -moz-animation: nameUp 1.2s;
+            -webkit-animation: nameUp 1.2s;
+            -o-animation: nameUp 1.2s;
+        }
+
+        .next-block {
+            animation: nextHide 1.2s;
+            -moz-animation: nextHide 1.2s;
+            -webkit-animation: nextHide 1.2s;
+            -o-animation: nextHide 1.2s;
+        }
+    }
 }
 @keyframes nameDown {
     from {
@@ -286,5 +303,45 @@
 
     100% {
         @include scale(1);
+    }
+}
+@keyframes nameUp {
+    100% {
+        top: -100%;
+    }
+}
+@-moz-keyframes nameUp {
+    100% {
+        top: -100%;
+    }
+}
+@-webkit-keyframes nameUp {
+    100% {
+        top: -100%;
+    }
+}
+@-o-keyframes nameUp {
+    100% {
+        top: -100%;
+    }
+}
+@keyframes nextHide {
+    100% {
+        left: -100%;
+    }
+}
+@-moz-keyframes nextHide {
+    100% {
+        left: -100%;
+    }
+}
+@-webkit-keyframes nextHide {
+    100% {
+        left: -100%;
+    }
+}
+@-o-keyframes nextHide {
+    100% {
+        left: -100%;
     }
 }

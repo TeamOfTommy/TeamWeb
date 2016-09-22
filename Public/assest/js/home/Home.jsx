@@ -1,5 +1,5 @@
 import React from 'react';
-import {Router, Route, IndexRoute} from 'react-router';
+import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 
 import FirstBlock from './FirstBlock.jsx';
 import HomeLayout from './HomeLayout.jsx';
@@ -13,7 +13,7 @@ export default class Home extends React.Component {
     }
     render() {
         return (
-            <Router>
+            <Router history={browserHistory}>
                 <Route path="/" component={HomeLayout}>
                     <IndexRoute component={FirstBlock}/>
                     <Route path="second" component={SecondBlock}/>
