@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>团队工作室</title>
-    <link rel="stylesheet" href="/DreamTeamWeb/Public/css/base.css">
+    <link rel="stylesheet" href="/Public/css/base.css">
 </head>
 <body>
 <div id="home"></div>
-<script src="/DreamTeamWeb/Public/js/home/index.bundle.js"></script>
+<script src="/Public/js/home/index.bundle.js"></script>
 
 </body>
 </html>
