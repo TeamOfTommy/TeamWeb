@@ -10,7 +10,7 @@ export default class HomeLayout extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className="home-layout">
                 {this.props.children}
             </div>
         )
