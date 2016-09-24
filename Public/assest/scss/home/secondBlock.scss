@@ -1,187 +1,186 @@
 @import "animate.scss";
 
 .second-block {
-    background: transparent url('../../image/home_back_2.jpg') left top no-repeat;
+    background: transparent url('../../image/home_back_3.jpeg') left top no-repeat;
 
-    .left-mask {
-        width: 70%;
-        height: 150%;
-        background-color: rgba(255, 255, 255,0.4);
-        @include rotate(18deg);
+    .intro {
         position: absolute;
-        right: -25%;
-        top: -25%;
-    }
+        left: 23%;
+        text-align: left;
+        top: 20%;
+        color: #aba4a4;
+        font-size: 26px;
+        animation: introDown 1s;
+        -moz-animation: introDown 1s;
+        -webkit-animation: introDown 1s;
+        -o-animation: introDown 1s;
 
-    .title {
-        color: #a6a6a6;
-        position: absolute;
-        top: 8%;
-        left: 15%;
-        font-size: 30px;
-        animation: titleCome 1s;
-        -moz-animation: titleCome 1s;
-        -webkit-animation: titleCome 1s;
-        -o-animation: titleCome 1s;
-    }
-
-    .reason {
-        position: absolute;
-        color: #333333;
-        font-size: 35px;
-
-        .icon {
-            height: 48px;
-            margin-right: 4%;
-            animation: iconCome 0.8s;
-            -moz-animation: iconCome 0.8s;
-            -webkit-animation: iconCome 0.8s;
-            -o-animation: iconCome 0.8s;
-        }
-
-        .answer {
-            position: absolute;
-            top: 0;
-            left: 22%;
+        .title {
+            font-size: 35px;
             font-weight: 600;
-            animation: answerCome 0.8s;
-            -moz-animation: answerCome 0.8s;
-            -webkit-animation: answerCome 0.8s;
-            -o-animation: answerCome 0.8s;
+            color: #a08f8f;
         }
     }
 
-    .rigorous {
-        top: 25%;
+    .next-block {
+        position: absolute;
+        bottom: 50px;
         left: 50%;
-        width: 50%;
+        opacity: 0.8;
+        display: block;
+
+        img {
+            height: 33px;
+            border: 3px solid #333333;
+            animation: nextJump 2s infinite;
+            -moz-animation: nextJump 2s infinite;
+            -webkit-animation: nextJump 2s infinite;
+            -o-animation: nextJump 2s infinite;
+        }
     }
 
-    .efficiency {
-        top: 46%;
-        left: 45%;
-        width: 55%;
-    }
-
-    .safety {
-        top: 67%;
-        left: 41%;
-        width: 59%;
+    &.hide-down {
+        .intro {
+            animation: introHide 0.8s;
+            -moz-animation: introHide 0.8s;
+            -webkit-animation: introHide 0.8s;
+            -o-animation: introHide 0.8s;
+        }
     }
 }
-@keyframes titleCome {
+@keyframes introDown {
     from {
-        left: -15%;
-    }
-
-    to {
-        left: 15%;
-    }
-}
-@-moz-keyframes titleCome {
-    from {
-        left: -15%;
-    }
-
-    to {
-        left: 15%;
-    }
-}
-@-webkit-keyframes titleCome {
-    from {
-        left: -15%;
-    }
-
-    to {
-        left: 15%;
-    }
-}
-@-o-keyframes titleCome {
-    from {
-        left: -15%;
-    }
-
-    to {
-        left: 15%;
-    }
-}
-@keyframes iconCome {
-    from {
-        opacity: 0.1;
-        @include rotate(-60deg);
+        opacity: 0;
+        top: 0;
     }
 
     to {
         opacity: 1;
-        @include rotate(0);
+        top: 20%;
     }
 }
-@-moz-keyframes iconCome {
+@-moz-keyframes introDown {
     from {
-        opacity: 0.1;
-        @include rotate(-60deg);
+        opacity: 0;
+        top: 0;
     }
 
     to {
         opacity: 1;
-        @include rotate(0);
+        top: 20%;
     }
 }
-@-webkit-keyframes iconCome {
+@-webkit-keyframes introDown {
     from {
-        opacity: 0.1;
-        @include rotate(-60deg);
+        opacity: 0;
+        top: 0;
     }
 
     to {
         opacity: 1;
-        @include rotate(0);
+        top: 20%;
     }
 }
-@-o-keyframes iconCome {
+@-o-keyframes introDown {
     from {
-        opacity: 0.1;
-        @include rotate(-60deg);
+        opacity: 0;
+        top: 0;
     }
 
     to {
         opacity: 1;
-        @include rotate(0);
+        top: 20%;
     }
 }
-@keyframes answerCome {
-    from {
-        left: 110%;
+@keyframes nextJump {
+    0% {
+        @include scale(1);
     }
 
-    to {
-        left: 22%;
+    80% {
+        @include scale(1.4);
+    }
+
+    90% {
+        @include scale(0.9);
+    }
+
+    100% {
+        @include scale(1);
     }
 }
-@-moz-keyframes answerCome {
-    from {
-        left: 110%;
+@-moz-keyframes nextJump {
+    0% {
+        @include scale(1);
     }
 
-    to {
-        left: 22%;
+    80% {
+        @include scale(1.4);
+    }
+
+    90% {
+        @include scale(0.9);
+    }
+
+    100% {
+        @include scale(1);
     }
 }
-@-webkit-keyframes answerCome {
-    from {
-        left: 110%;
+@-webkit-keyframes nextJump {
+    0% {
+        @include scale(1);
     }
 
-    to {
-        left: 22%;
+    80% {
+        @include scale(1.4);
+    }
+
+    90% {
+        @include scale(0.9);
+    }
+
+    100% {
+        @include scale(1);
     }
 }
-@-o-keyframes answerCome {
-    from {
-        left: 110%;
+@-o-keyframes nextJump {
+    0% {
+        @include scale(1);
     }
 
+    80% {
+        @include scale(1.4);
+    }
+
+    90% {
+        @include scale(0.9);
+    }
+
+    100% {
+        @include scale(1);
+    }
+}
+@keyframes introHide {
     to {
-        left: 22%;
+        opacity: 0;
+        @include scale(1.4);
+    }
+}
+@-moz-keyframes introHide {
+    to {
+        opacity: 0;
+        @include scale(1.4);
+    }
+}
+@-webkit-keyframes introHide {
+    to {
+        opacity: 0;
+        @include scale(1.4);
+    }
+}
+@-o-keyframes introHide {
+    to {
+        opacity: 0;
+        @include scale(1.4);
     }
 }

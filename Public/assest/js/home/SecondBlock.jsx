@@ -1,4 +1,5 @@
 import React from 'react';
+import {browserHistory} from 'react-router';
 
 import '../../../css/home/secondBlock.css';
 
@@ -6,41 +7,37 @@ export default class SecondBlock extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            showAnswer: false
+            hide: false
         }
+        this.goNextPage = this.goNextPage.bind(this);
     }
-    componentDidMount() {
-        let _self = this;
+    goNextPage() {
+        this.setState({hide: true});
         setTimeout(() => {
-            _self.setState({showAnswer: true});
-        }, 1200);
+            browserHistory.push('third');
+        }, 800);
     }
     render() {
         const screenHeight = document.body.clientHeight;
         const screenWidth = document.body.clientWidth;
 
         return (
-            <div className="second-block show-block" style={{
+            <div className={this.state.hide
+                ? "second-block show-block hide-down"
+                : "second-block show-block"} style={{
                 height: screenHeight + 'px'
             }}>
-                <p className="title">为什么选择我们？</p>
-                <div className="left-mask"></div>
-                {this.state.showAnswer
-                    ? <div>
-                            <div className="reason rigorous">
-                                <img className="icon" src={require("../../image/rigorous.png")}/>
-                                <p className="answer">严谨</p>
-                            </div>
-                            <div className="reason efficiency">
-                                <img className="icon" src={require("../../image/efficiency.png")}/>
-                                <p className="answer">高效</p>
-                            </div>
-                            <div className="reason safety">
-                                <img className="icon" src={require("../../image/safe.png")}/>
-                                <p className="answer">安全</p>
-                            </div>
-                        </div>
-                    : false}
+                <div className="intro">
+                    <p className="title">DreamTeam是一只专业的网站制作团队</p>
+                    <p>大型，中型，小型网站</p>
+                    <p>微信服务号</p>
+                    <p>PC端，移动端</p>
+                    <p>等等..</p>
+                    <p>无所不能</p>
+                </div>
+                <a href="javascript:void(0)" className="next-block" onClick={this.goNextPage}>
+                    <img src={require("../../image/icon_down_arrow_black.png")}/>
+                </a>
             </div>
         )
     }

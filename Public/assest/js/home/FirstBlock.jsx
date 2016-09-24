@@ -1,5 +1,5 @@
 import React from 'react';
-import {browserHistory} from 'react-router'
+import {browserHistory} from 'react-router';
 
 import '../../../css/home/firstBlock.css';
 
@@ -42,7 +42,10 @@ export default class FirstBlock extends React.Component {
                     left: ((screenWidth - screenHeight * 0.4) / 2 + 3 + 'px'),
                     top: (screenHeight * 0.27 + 'px')
                 }}></div>
-                <a href="javascript:void(0)" className="next-block" onClick={this.goNextPage}>Dream团队<img src={require("../../image/icon_next_arrow.png")}/></a>
+                <a href="javascript:void(0)" className="next-block" onClick={this.goNextPage}>
+                    Dream团队
+                    <img src={require("../../image/icon_next_arrow.png")}/>
+                </a>
             </div>
         )
     }
