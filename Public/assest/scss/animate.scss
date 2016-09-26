@@ -34,6 +34,16 @@
       -ms-transform: translate($x, $y); // IE9+
           transform: translate($x, $y);
 }
+@mixin translateY($y) {
+  -webkit-transform: translateY($y);
+      -ms-transform: translateY($y); // IE9+
+          transform: translateY($y);
+}
+@mixin translateX($x) {
+  -webkit-transform: translateX($y);
+      -ms-transform: translateX($y); // IE9+
+          transform: translateX($y);
+}
 @mixin skew($x, $y) {
   -webkit-transform: skew($x, $y);
       -ms-transform: skewX($x) skewY($y); // See https://github.com/twbs/bootstrap/issues/4885; IE9+

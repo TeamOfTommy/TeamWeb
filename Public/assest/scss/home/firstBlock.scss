@@ -33,6 +33,7 @@
         position: absolute;
         @include border-radius(50%);
         border: 1px rgba(228, 224, 224,0.4) solid;
+        animation: nameCircle 1.3s;
         -moz-animation: nameCircle 1.3s;
         -webkit-animation: nameCircle 1.3s;
         -o-animation: nameCircle 1.3s;
@@ -46,17 +47,36 @@
         font-style: italic;
         color: #e6e6e6;
         opacity: 0.8;
-        -moz-animation: nextBlock 1.5s ease-out;
-        -webkit-animation: nextBlock 1.5s ease-out;
-        -o-animation: nextBlock 1.5s ease-out;
+        animation: 1.2s ease-out;
+        -moz-animation: nextBlock 1.2s ease-out;
+        -webkit-animation: nextBlock 1.2s ease-out;
+        -o-animation: nextBlock 1.2s ease-out;
 
         img {
             height: 33px;
             margin-left: 10px;
             margin-top: -5px;
+            animation: nextJump 2s infinite;
             -moz-animation: nextJump 2s infinite;
             -webkit-animation: nextJump 2s infinite;
             -o-animation: nextJump 2s infinite;
+        }
+    }
+
+    &.hide-back {
+        .name,
+        .name-circle {
+            animation: nameUp 1.2s;
+            -moz-animation: nameUp 1.2s;
+            -webkit-animation: nameUp 1.2s;
+            -o-animation: nameUp 1.2s;
+        }
+
+        .next-block {
+            animation: nextHide 1.2s;
+            -moz-animation: nextHide 1.2s;
+            -webkit-animation: nextHide 1.2s;
+            -o-animation: nextHide 1.2s;
         }
     }
 }
@@ -163,7 +183,7 @@
     }
 
     80% {
-        left: -20%;
+        left: -10%;
         opacity: 0;
     }
 
@@ -179,7 +199,7 @@
     }
 
     80% {
-        left: -20%;
+        left: -10%;
         opacity: 0;
     }
 
@@ -195,7 +215,7 @@
     }
 
     80% {
-        left: -20%;
+        left: -10%;
         opacity: 0;
     }
 
@@ -211,7 +231,7 @@
     }
 
     80% {
-        left: -20%;
+        left: -10%;
         opacity: 0;
     }
 
@@ -286,5 +306,45 @@
 
     100% {
         @include scale(1);
+    }
+}
+@keyframes nameUp {
+    100% {
+        top: -100%;
+    }
+}
+@-moz-keyframes nameUp {
+    100% {
+        top: -100%;
+    }
+}
+@-webkit-keyframes nameUp {
+    100% {
+        top: -100%;
+    }
+}
+@-o-keyframes nameUp {
+    100% {
+        top: -100%;
+    }
+}
+@keyframes nextHide {
+    100% {
+        left: -100%;
+    }
+}
+@-moz-keyframes nextHide {
+    100% {
+        left: -100%;
+    }
+}
+@-webkit-keyframes nextHide {
+    100% {
+        left: -100%;
+    }
+}
+@-o-keyframes nextHide {
+    100% {
+        left: -100%;
     }
 }

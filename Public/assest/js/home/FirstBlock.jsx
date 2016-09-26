@@ -1,17 +1,30 @@
 import React from 'react';
+import {browserHistory} from 'react-router';
 
 import '../../../css/home/firstBlock.css';
 
 export default class FirstBlock extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
+        this.state = {
+            hide: false
+        }
+        this.goNextPage = this.goNextPage.bind(this);
+    }
+    goNextPage() {
+        this.setState({hide: true});
+        setTimeout(() => {
+            browserHistory.push('second');
+        }, 1190);
     }
     render() {
         const screenHeight = document.body.clientHeight;
         const screenWidth = document.body.clientWidth;
 
         return (
-            <div className="first-block show-block" style={{
+            <div className={this.state.hide
+                ? "first-block show-block hide-back"
+                : "first-block show-block"} style={{
                 height: screenHeight + 'px'
             }}>
                 <div className="name" style={{
@@ -29,7 +42,10 @@ export default class FirstBlock extends React.Component {
                     left: ((screenWidth - screenHeight * 0.4) / 2 + 3 + 'px'),
                     top: (screenHeight * 0.27 + 'px')
                 }}></div>
-                <a href="javascript:void(0)" className="next-block">Dream团队<img src={require("../../image/icon_next_arrow.png")}/></a>
+                <a href="javascript:void(0)" className="next-block" onClick={this.goNextPage}>
+                    Dream团队
+                    <img src={require("../../image/icon_next_arrow.png")}/>
+                </a>
             </div>
         )
     }
