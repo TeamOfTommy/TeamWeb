@@ -1,5 +1,7 @@
 import React from 'react';
-import {Router, Route, IndexRoute, browserHistory} from 'react-router';
+import {Router, Route, Redirect, IndexRoute, browserHistory} from 'react-router';
+
+import {pathConfig} from '../config.js';
 
 import FirstBlock from './FirstBlock.jsx';
 import HomeLayout from './HomeLayout.jsx';
@@ -15,10 +17,12 @@ export default class Home extends React.Component {
     render() {
         return (
             <Router history={browserHistory}>
-                <Route path="/" component={HomeLayout}>
+                <Route path={pathConfig.rootPath} component={HomeLayout}>
                     <IndexRoute component={FirstBlock}/>
-                    <Route path="second" component={SecondBlock}/>
-                    <Route path="third" component={ThirdBlock}/>
+                    <Route path="/second" component={SecondBlock}/>
+                    <Redirect from="second" to="/second"/>
+                    <Route path="/third" component={ThirdBlock}/>
+                    <Redirect from="third" to="/third"/>
                 </Route>
             </Router>
         )

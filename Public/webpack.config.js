@@ -7,7 +7,7 @@ module.exports = {
     output: {
         path: __dirname + '/js/',
         filename: '[name].bundle.js',
-        publicPath: '/Public/image/'
+        publicPath: '/DreamTeamWeb/Public/image/'
     },
     module: {
         loaders: [{
