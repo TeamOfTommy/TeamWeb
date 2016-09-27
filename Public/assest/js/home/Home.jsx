@@ -18,8 +18,7 @@ export default class Home extends React.Component {
         return (
             <Router history={browserHistory}>
                 <Route path={pathConfig.rootPath} component={HomeLayout}>
-                    {/* <IndexRoute component={FirstBlock}/> */}
-                    <IndexRoute component={ThirdBlock}/>
+                    <IndexRoute component={FirstBlock}/>
                     <Route path="/second" component={SecondBlock}/>
                     <Redirect from="second" to="/second"/>
                     <Route path="/third" component={ThirdBlock}/>
