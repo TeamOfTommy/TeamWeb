@@ -9,7 +9,7 @@
         background-color: rgba(255, 255, 255,0.4);
         @include rotate(18deg);
         position: absolute;
-        right: -25%;
+        right: -21%;
         top: -25%;
     }
 
@@ -49,23 +49,35 @@
             -webkit-animation: answerCome 0.8s;
             -o-animation: answerCome 0.8s;
         }
+
+        .detail {
+            position: absolute;
+            top: 67px;
+            left: 24%;
+            color: #2d323c;
+            font-size: 20px;
+            animation: detailCome 1.5s;
+            -moz-animation: detailCome 1.5s;
+            -webkit-animation: detailCome 1.5s;
+            -o-animation: detailCome 1.5s;
+        }
     }
 
     .rigorous {
         top: 25%;
-        left: 50%;
+        left: 46%;
         width: 50%;
     }
 
     .efficiency {
         top: 46%;
-        left: 45%;
+        left: 40%;
         width: 55%;
     }
 
     .safety {
-        top: 67%;
-        left: 41%;
+        top: 69%;
+        left: 35%;
         width: 59%;
     }
 }
@@ -183,5 +195,57 @@
 
     to {
         left: 22%;
+    }
+}
+@keyframes detailCome {
+    0% {
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes detailCome {
+    0% {
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes detailCome {
+    0% {
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@-o-keyframes detailCome {
+    0% {
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
