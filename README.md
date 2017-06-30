@@ -11,3 +11,6 @@ TommyYang 团队工作室 网站
 - react, react-router and es2015
 - webpack
 - sass
+
+
+[![Join the chat at https://gitter.im/tommy-github-io/blog.tommyyang.cn](https://badges.gitter.im/joyang1/tommy.github.io.svg)](https://gitter.im/tommy-github-io/blog.tommyyang.cn?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
